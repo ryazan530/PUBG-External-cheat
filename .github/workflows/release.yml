@@ -19,9 +19,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: "TSLGame External ${{ github.ref_name }}"
+          name: "BzWare ${{ github.ref_name }}"
           body: |
-            ## 🎮 TSLGame External ${{ github.ref_name }}
+            ## 🎮 BzWare ${{ github.ref_name }}
 
             **External Cheat For PUBG With Included Spoofer**
 

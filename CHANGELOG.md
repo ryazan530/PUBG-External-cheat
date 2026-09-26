@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to TSLGame External will be documented in this file.
+All notable changes to BzWare will be documented in this file.
 
 ## [4.2.1] — 2025-09-25
 

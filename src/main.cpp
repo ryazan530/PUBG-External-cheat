@@ -10,7 +10,7 @@
 // ─── Config ────────────────────────────────────────────────────────────────
 #define DISCORD_URL  "https://discord.gg/cYQQvaZRgE"
 #define LOADER_VER   "4.2.1"
-#define WINDOW_NAME  "TSLGame External"
+#define WINDOW_NAME  "BzWare"
 #define MENU_KEY     VK_INSERT
 
 // ─── Globals ───────────────────────────────────────────────────────────────
@@ -56,7 +56,7 @@ void OpenURL(const char* url) {
 // ─── Splash / loader ───────────────────────────────────────────────────────
 void ShowSplash() {
     HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTitleA("TSLGame External — Loading...");
+    SetConsoleTitleA("BzWare — Loading...");
     DWORD mode;
     GetConsoleMode(hCon, &mode);
     SetConsoleMode(hCon, mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
@@ -74,7 +74,7 @@ void ShowSplash() {
     printf("     ██║   ╚════██║██║     ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝  \n");
     printf("     ██║   ███████║███████╗╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗\n");
     printf("     ╚═╝   ╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝\n");
-    printf("\033[0m\033[90m                   External v%s — by h4xdev\033[0m\n\n", LOADER_VER);
+    printf("\033[0m\033[90m                   External v%s — by BzWare\033[0m\n\n", LOADER_VER);
 
     p("\033[90m", "  Initializing loader...");
     p("\033[90m", "  Locating tslgame.exe process...");
@@ -305,7 +305,7 @@ void DrawMenu(HWND hwnd, HDC hdc) {
     GRoundFill(hdc, mx+1, my+1, mw-2, 3, 2, COL_ACCENT);
 
     // Logo / título
-    GText(hdc, "TSLGame", mx+18, my+10, COL_ACCENT, 17, true);
+    GText(hdc, "BzWare", mx+18, my+10, COL_ACCENT, 17, true);
     GText(hdc, "External", mx+18+68+4, my+10, COL_TEXT, 17, false);
     GText(hdc, "v" LOADER_VER, mx+18+68+4+56, my+16, COL_MUTED, 11);
 
@@ -448,7 +448,7 @@ void DrawMenu(HWND hwnd, HDC hdc) {
 
         GText(hdc, "Status:", cx, cy, COL_MUTED, 11);
         DrawBadge(hdc, cx+46, cy-1, "UNDETECTED", RGB(34,90,50));
-        GText(hdc, "h4xdev  •  v" LOADER_VER, cx+cw-90, cy, COL_MUTED, 10);
+        GText(hdc, "BzWare  •  v" LOADER_VER, cx+cw-90, cy, COL_MUTED, 10);
     }
 
     // — Rodapé —
@@ -572,12 +572,12 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR, int) {
     wc.lpfnWndProc   = WndProc;
     wc.hInstance     = hInst;
     wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
-    wc.lpszClassName = "TSLOverlay";
+    wc.lpszClassName = "BzWareOverlay";
     RegisterClassExA(&wc);
 
     HWND hwnd = CreateWindowExA(
         WS_EX_TOPMOST | WS_EX_LAYERED,
-        "TSLOverlay", "TSLGame External",
+        "BzWareOverlay", "BzWare",
         WS_POPUP,
         80, 60, 540, 620,
         NULL, NULL, hInst, NULL);

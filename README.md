@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/TSLGame-External-red?style=for-the-badge" />
+<img src="https://img.shields.io/badge/BzWare-External-red?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Status-Undetected-brightgreen?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Version-4.2.1-blue?style=for-the-badge" />
 
-# 🎮 TSLGame External
+# 🎮 BzWare
 
 ### External Cheat For PUBG With Included Spoofer
 
@@ -15,7 +15,7 @@
 
 ---
 
-Welcome to the **TSLGame External** repository! This project offers an external cheat for PUBG, complete with a spoofer. If you are looking to enhance your gameplay experience in PUBG, you have come to the right place.
+Welcome to the **BzWare** repository! This project offers an external cheat for PUBG, complete with a spoofer. If you are looking to enhance your gameplay experience in PUBG, you have come to the right place.
 
 ## 🌟 Features
 
@@ -77,7 +77,7 @@ No Recoil, No Sway and other quality-of-life options.
 ## 📦 Project Structure
 
 ```
-tslgame-external/
+bzware/
 ├── loader.exe          # Main executable (download from Releases)
 ├── esp-preview.png     # In-game ESP screenshot
 ├── src/                # Source / menu code
@@ -112,7 +112,7 @@ While using cheats can enhance your gaming experience, it is essential to unders
 
 ## 📅 Updates and Changelog
 
-We regularly update **TSLGame External** for the latest PUBG patches. See [CHANGELOG.md](CHANGELOG.md) and the [Releases](../../releases) page for details.
+We regularly update **BzWare** for the latest PUBG patches. See [CHANGELOG.md](CHANGELOG.md) and the [Releases](../../releases) page for details.
 
 ## 🤝 Contributing
 
@@ -136,7 +136,7 @@ Thanks to the community and all contributors. Your feedback helps us improve.
 ## 📸 Screenshots
 
 <div align="center">
-<img src="esp-preview.png" alt="TSLGame External ESP Preview" width="900"/>
+<img src="esp-preview.png" alt="BzWare ESP Preview" width="900"/>
 <br/>
 <sub>Real gameplay · Skeleton ESP · Player info overlays</sub>
 </div>
@@ -147,7 +147,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ## 🚀 Conclusion
 
-Thank you for checking out **TSLGame External**. Download the latest build from [Releases](../../releases/latest), join Discord for support, and star ⭐ the repo if it helped you.
+Thank you for checking out **BzWare**. Download the latest build from [Releases](../../releases/latest), join Discord for support, and star ⭐ the repo if it helped you.
 
 ---
 

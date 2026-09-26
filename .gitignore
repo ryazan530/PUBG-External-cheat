@@ -3,7 +3,7 @@ PUBLICAR.bat
 1_LOGIN.bat
 2_PUBLISH.bat
 loader.exe
-tslgame.exe
+bzware.exe
 *.exe
 ]
 build/
