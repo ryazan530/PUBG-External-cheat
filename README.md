@@ -6,6 +6,8 @@
 
 # 🎯 TSLGame External Cheat Menu
 
+**External Cheat For Pubg With Included Spoofer**
+
 [![Discord](https://img.shields.io/badge/Discord-JOIN-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/cYQQvaZRgE)
 
 </div>
@@ -24,7 +26,13 @@
 - 👁️ **Player ESP** — Box, Skeleton, Head, Health, Names, Distance
 - 🗺️ **Item ESP** — Weapons, Loot, Air Drops, Attachments
 - 📡 **Radar** — Scale, Lines, Transparency
-- ⚙️ **Misc** — No Recoil, No Sway
+- ⚙️ **Misc** — No Recoil, No Sway, HWID Spoofer
+
+---
+
+## 🏷️ Topics
+
+`pubg` · `pubg-cheat-legit-2025` · `pubg-cheat-mod-menu-2025` · `pubg-cheat-source-code-2025` · `pubg-driver-optimization` · `pubg-easy-play` · `pubg-hack-github` · `pubg-hack-new` · `pubg-hack-source` · `pubgmodtool`
 
 ---
 
