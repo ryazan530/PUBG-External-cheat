@@ -1,61 +1,53 @@
-name: Release loader.exe
+name: Create Release
 
 on:
   push:
     tags:
-      - 'v*'          # dispara em qualquer tag vX.X.X
+      - 'v*'
 
 permissions:
-  contents: write     # necessário para criar a Release
+  contents: write
 
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
-      # ── 1. Baixa o código (inclui loader.exe do repositório) ──────────
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ── 2. Verifica se loader.exe existe ───────────────────────────────
-      - name: Check loader.exe
-        run: |
-          if [ ! -f loader.exe ]; then
-            echo "ERRO: loader.exe nao encontrado na raiz do repositorio!"
-            ls -la
-            exit 1
-          fi
-          echo "OK: loader.exe encontrado ($(du -h loader.exe | cut -f1))"
-          # Copia com nome amigavel para o download
-          cp loader.exe tslgame.exe
-
-      # ── 3. Cria a Release no GitHub e anexa o .exe ────────────────────
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
           name: "TSLGame External ${{ github.ref_name }}"
           body: |
-            ## TSLGame External ${{ github.ref_name }}
+            ## 🎮 TSLGame External ${{ github.ref_name }}
 
-            ### Download
-            Baixe o **`loader.exe`** (ou `tslgame.exe`) abaixo e execute.
+            **External Cheat For PUBG With Included Spoofer**
 
-            ### Features
-            - 🎯 Aimbot — Bone, FOV, Smooth, Hardlock, Predict
-            - 👁️ Player ESP — Box, Skeleton, Head, Health, Names
-            - 🗺️ Item ESP — Weapons, Loot, Air Drops
-            - 📡 Radar — Scale, Lines, Transparency
-            - ⚙️ Misc — No Recoil, No Sway
+            ### ⬇️ Download
+            Download **`loader.exe`** from the assets below (uploaded with the release).
 
-            ### Controls
-            - **INSERT** — Abrir/fechar menu
-            - **END** — Sair
+            ### 🌟 Features
+            - **Aimbot** — Bone · FOV · Smooth · Hardlock · Predict
+            - **Player ESP** — Box · Skeleton · Head · Health · Names · Distance
+            - **Item ESP** — Weapons · Loot · Air Drops · Attachments
+            - **Radar** — Scale · Lines · Transparency
+            - **Misc** — No Recoil · No Sway · **HWID Spoofer**
+
+            ### ⌨️ Controls
+            - **INSERT** — Open / close menu
+            - **END** — Exit
+
+            ### 📦 Installation
+            1. Download `loader.exe` from this Release
+            2. Run it (no install)
+            3. Launch PUBG and press INSERT
 
             ---
-            [![Discord](https://img.shields.io/badge/Suporte-Discord-5865F2?logo=discord)](https://discord.gg/cYQQvaZRgE)
-          files: |
-            loader.exe
-            tslgame.exe
+
+            [![Discord](https://img.shields.io/badge/Support-Discord-5865F2?logo=discord)](https://discord.gg/cYQQvaZRgE)
+
+            ⭐ Star the repo for more updates!
           draft: false
           prerelease: false
