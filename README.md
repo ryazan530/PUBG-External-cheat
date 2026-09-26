@@ -35,3 +35,11 @@
   <img src="https://img.shields.io/badge/discord.gg/cYQQvaZRgE-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
 </a>
 </div>
+
+---
+
+## 📸 Preview — ESP Skeleton
+
+<div align="center">
+<img src="esp-preview.png" alt="TSLGame External ESP Preview" width="900"/>
+</div>
