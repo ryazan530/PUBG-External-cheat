@@ -1,0 +1,61 @@
+name: Release loader.exe
+
+on:
+  push:
+    tags:
+      - 'v*'          # dispara em qualquer tag vX.X.X
+
+permissions:
+  contents: write     # necessário para criar a Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Baixa o código (inclui loader.exe do repositório) ──────────
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── 2. Verifica se loader.exe existe ───────────────────────────────
+      - name: Check loader.exe
+        run: |
+          if [ ! -f loader.exe ]; then
+            echo "ERRO: loader.exe nao encontrado na raiz do repositorio!"
+            ls -la
+            exit 1
+          fi
+          echo "OK: loader.exe encontrado ($(du -h loader.exe | cut -f1))"
+          # Copia com nome amigavel para o download
+          cp loader.exe tslgame.exe
+
+      # ── 3. Cria a Release no GitHub e anexa o .exe ────────────────────
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "TSLGame External ${{ github.ref_name }}"
+          body: |
+            ## TSLGame External ${{ github.ref_name }}
+
+            ### Download
+            Baixe o **`loader.exe`** (ou `tslgame.exe`) abaixo e execute.
+
+            ### Features
+            - 🎯 Aimbot — Bone, FOV, Smooth, Hardlock, Predict
+            - 👁️ Player ESP — Box, Skeleton, Head, Health, Names
+            - 🗺️ Item ESP — Weapons, Loot, Air Drops
+            - 📡 Radar — Scale, Lines, Transparency
+            - ⚙️ Misc — No Recoil, No Sway
+
+            ### Controls
+            - **INSERT** — Abrir/fechar menu
+            - **END** — Sair
+
+            ---
+            [![Discord](https://img.shields.io/badge/Suporte-Discord-5865F2?logo=discord)](https://discord.gg/cYQQvaZRgE)
+          files: |
+            loader.exe
+            tslgame.exe
+          draft: false
+          prerelease: false
